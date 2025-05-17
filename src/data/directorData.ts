@@ -1,0 +1,61 @@
+export const directorData = [
+  ["Shannon Shuang Ding", 17038595.00, 16840387.00, 6004963.00, 114497.00, 181220.00],
+  ["Jun Mizuguchi", 3448549.00, 4086988.00, 1686835.00, 42244.00, 936983.00],
+  ["Zhengxin Zhang", 12417762.00, 21096602.00, 5309211.00, 138978.00, 2385068.00],
+  ["Jeroen Eddy Ellen Clicq", 2043996.00, 3242772.00, 3966455.00, 73598.00, 307874.00],
+  ["Joerg Stephan", 2948793.00, 3756990.00, 3192205.00, 54744.00, 76876.00],
+  ["Xiana Margarida Mendez Bertolo", 2313364, 4459586, 1914080, 45824.00, 275610],
+  ["Yati Kurniati", 2410288, 6778149, 3173215, 66801, 749344],
+  ["Riccardo Ercoli", 1823182.00, 2712404.00, 1496959.00, 35912.00, 78905.00],
+  ["Arnaud Fernand Buisse", 2018525.00, 2649409.00, 1694547.00, 31120.00, 75315.00],
+  ["Veda Poon", 2150387.00, 2573474.00, 1835764.00, 38906.00, 118864.00],
+  ["Seong-Wook Kim", 2583322, 3200359, 1802499, 45632.00, 379372.00],
+  ["Georgina Fitzgerald", 3200359, 1802499, 45632.00, 379372.00, 96515],
+  ["Vitas Vasiliauskas", 1384397.00, 1535129.00, 1510419.00, 48134.00, 182891.00],
+  ["Yigit Korkmaz Yasar", 1425613.00, 3423135.00, 1706536.00, 45438.00, 213967.00],
+  ["Andre Roncaglia de Carvalho", 1478773.00, 3272509.00, 697081.00, 26492.00, 284077.00],
+  ["Krishnamurthy Venkata Subramania", 2563194.00, 9415875.00, 1185038.00, 29174.00, 437223.00],
+  ["Patryk Loszewski", 1194040.00, 2079881.00, 1746751.00, 45086.00, 851657.00],
+  ["Ksenia Yudaeva", 1508411.00, 4030688.00, 782448.00, 41192.00, 339339.00],
+  ["Mohamed Ahmed Mohamed Maait", 1192637.00, 2896895.00, 1364782.00, 49740.00, 272131.00],
+  ["Bahador Bijani", 805751.00, 2935639.00, 489800.00, 24772.00, 153374.00],
+  ["Mohamed Ahmed A Alrashed", 656499.00, 1236840.00, 431423.00, 21269.00, 343418.00],
+  ["Adriano Ubisse", 1150900.00, 2470825.00, 785775.00, 36098.00, 414926.00],
+  ["Leonardo Madcur", 838709, 1850226, 464286, 19071.00, 134823],
+  ["Ouattara Wautabouna", 475751, 1309749, 226343, 13123, 46073],
+  ["Regis Olivier N'Sonde", 364107, 1017915, 192753, 9000, 22250],
+];
+
+export const originalShares = {
+  "Shannon Shuang Ding": 831394,
+  "Jun Mizuguchi": 309657,
+  "Zhengxin Zhang": 306281,
+  "Jeroen Eddy Ellen Clicq": 275140,
+  "Joerg Stephan": 267796,
+  "Xiana Margarida Mendez Bertolo": 228441,
+  "Yati Kurniati": 211756,
+  "Riccardo Ercoli": 207870,
+  "Arnaud Fernand Buisse": 203003,
+  "Veda Poon": 203003,
+  "Seong-Wook Kim": 190379,
+  "Georgina Fitzgerald": 169962,
+  "Vitas Vasiliauskas": 165356,
+  "Yigit Korkmaz Yasar": 162240,
+  "Andre Roncaglia de Carvalho": 154447,
+  "Krishnamurthy Venkata Subramania": 153610,
+  "Patryk Loszewski": 147648,
+  "Ksenia Yudaeva": 134877,
+  "Mohamed Ahmed Mohamed Maait": 130107,
+  "Bahador Bijani": 123252,
+  "Mohamed Ahmed A Alrashed": 101378,
+  "Adriano Ubisse": 92139,
+  "Leonardo Madcur": 80079,
+  "Ouattara Wautabouna": 70699,
+  "Regis Olivier N'Sonde": 70549,
+};
+
+export const variables = ["GDP-MER", "GDP-PPP", "Openness", "Variability", "Reserves"];
+
+export const initialWeights = [0.30, 0.20, 0.30, 0.15, 0.05];
+export const initialCompressionFactor = 0.95;
+export const initialNewSharesTotal = 1000000;
