@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { RefreshCw } from 'lucide-react';
 import WeightSlider from './WeightSlider';
@@ -22,15 +22,17 @@ const InputForm: React.FC<InputFormProps> = ({ onCalculate }) => {
   const [newSharesTotal, setNewSharesTotal] = useState(initialNewSharesTotal);
   const [totalWeight, setTotalWeight] = useState(weights.reduce((a, b) => a + b, 0));
 
+  useEffect(() => {
+    if (Math.abs(totalWeight - 1) < 0.001) {
+      onCalculate(weights, compressionFactor, newSharesTotal);
+    }
+  }, [weights, compressionFactor, newSharesTotal, totalWeight, onCalculate]);
+
   const handleWeightChange = (index: number, value: number) => {
     const newWeights = [...weights];
     newWeights[index] = value;
     setWeights(newWeights);
     setTotalWeight(newWeights.reduce((a, b) => a + b, 0));
-  };
-
-  const handleCalculate = () => {
-    onCalculate(weights, compressionFactor, newSharesTotal);
   };
 
   const handleReset = () => {
@@ -97,18 +99,7 @@ const InputForm: React.FC<InputFormProps> = ({ onCalculate }) => {
         />
       </div>
       
-      <div className="flex space-x-4">
-        <button
-          onClick={handleCalculate}
-          disabled={Math.abs(totalWeight - 1) > 0.001}
-          className={`flex-1 py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white 
-            ${Math.abs(totalWeight - 1) < 0.001 
-              ? 'bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500' 
-              : 'bg-gray-400 cursor-not-allowed'}`}
-        >
-          Calculate
-        </button>
-        
+      <div className="flex justify-end">
         <button
           onClick={handleReset}
           className="py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 flex items-center"
